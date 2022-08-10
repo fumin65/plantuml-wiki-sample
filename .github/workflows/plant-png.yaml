@@ -10,9 +10,9 @@ jobs:
     if: github.event.pull_request.merged == true
     steps:
       - name: render plant urml
-        uses: frederikheld/render-plantuml-to-wiki-action@v1.0.1
+        uses: rotarur/render-plantuml-to-wiki-action@master
         with:
           WIKI_TOKEN: ${{ secrets.WIKI_TOKEN }}
-          INPUT_DIR: '.'
-          OUTPUT_DIR: '/plantumls'
+          INPUT_DIR: 'uml'
+          OUTPUT_DIR: 'attachments/auto-generated/diagrams/architecture'
 
